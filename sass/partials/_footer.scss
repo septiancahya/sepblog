@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as var;
+@use "sass:map";
+@use "../abstracts/mixins" as mix;
+
+footer .footer {
+  margin-top: 6rem;
+  padding-block: 2rem;
+  background-color: var.$primary-color;
+  .container {
+    @include mix.flex($flex-dir: column);
+    text-align: center;
+
+    /* border-top: 0.5px solid #f7c04a; */
+  }
+}
+
+@media screen and (min-width: map.get(var.$breakpoints, "md")) {
+  footer .footer {
+    margin-inline: unset;
+
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

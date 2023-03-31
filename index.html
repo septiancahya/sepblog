@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="dist/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -17,54 +17,60 @@
   <body>
     <!-- HEADER START -->
     <header class="header">
-      <a href="#"
-        ><h1>Sep<span>Blog</span></h1></a
-      >
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="navigation"
-        aria-expanded="false"
-      ></button>
-      <nav class="navigation" id="navigation">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#article">Article</a></li>
-          <li><a class="nav-link" href="#gallery">Gallery</a></li>
-        </ul>
+      <nav>
+        <div class="container">
+          <div class="logo" id="logo">
+            <a href="#"
+              ><h1>Sep<span>Blog</span></h1></a
+            >
+          </div>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="navigation"
+            aria-expanded="false"
+          ></button>
+          <div class="navigation" id="navigation">
+            <ul aria-label="Primary" role="list" class="nav-list">
+              <li><a class="nav-link" href="#">Home</a></li>
+              <li><a class="nav-link" href="#newest-articles">Article</a></li>
+              <li><a class="nav-link" href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-image">
+            <img src="./public/images/hero-img.png" alt="" />
+          </div>
+          <div class="hero-text">
+            <p>Our Blog</p>
+            <h1>Travel & Stories</h1>
+            <p>
+              Blog yang memandu Anda untuk menjelajahi dunia dengan cara yang
+              menyenangkan dan informatif
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- HERO SECTION END -->
     </header>
     <!-- HEADER END -->
     <main>
-      <!-- HOME START -->
-      <div id="home" class="home container">
-        <div class="home-image">
-          <img src="./assets/images/hero-img.png" alt="" />
-        </div>
-        <div class="home-description">
-          <p>Our Blog</p>
-          <h1>Travel & Stories</h1>
-          <p>
-            Blog yang memandu Anda untuk menjelajahi dunia dengan cara yang
-            menyenangkan dan informatif
-          </p>
-        </div>
-      </div>
-      <!-- HOME END -->
-
-      <!-- ARTICLE START -->
-      <div id="article" class="article-container container">
-        <!-- ARTICLE MAIN CONTENT -->
-        <div class="main-content">
-          <h2>Artikel</h2>
+      <div class="container">
+        <!-- MAIN SECTION -->
+        <section class="newest-articles section" id="newest-articles">
+          <h2 class="section-title">Artikel</h2>
           <article>
             <figure class="article-image">
-              <img src="./assets/images/thailand.jpeg" alt="" />
+              <img src="./public/images/thailand.jpeg" alt="" />
             </figure>
-            <section class="article-description">
-              <div class="top-description">
-                <span>Destinasi</span>
+            <div class="article-content">
+              <div class="top-content">
+                <span class="badge">Destinasi</span>
               </div>
-              <div class="middle-description">
+              <div class="middle-content">
                 <a href=""><h1>Menjelajahi Keindahan Thailand</h1></a>
                 <p>
                   Thailand adalah negara yang terkenal dengan pantai-pantainya
@@ -74,26 +80,26 @@
                   <a href="#" class="read-more">Baca Selengkapnya</a>
                 </p>
               </div>
-              <div class="bottom-description">
+              <div class="bottom-content">
                 <figure>
-                  <img src="./assets/images/profile.png" alt="" />
+                  <img src="./public/images/profile.png" alt="" />
                   <figcaption>
                     <h5>Septian Cahya</h5>
                     <p>3 menit yang lalu</p>
                   </figcaption>
                 </figure>
               </div>
-            </section>
+            </div>
           </article>
           <article>
             <figure class="article-image">
-              <img src="./assets/images/korean-food.jpeg" alt="" />
+              <img src="./public/images/korean-food.jpeg" alt="" />
             </figure>
-            <section class="article-description">
-              <div class="top-description">
-                <span>Kuliner</span>
+            <div class="article-content">
+              <div class="top-content">
+                <span class="badge">Kuliner</span>
               </div>
-              <div class="middle-description">
+              <div class="middle-content">
                 <a href=""><h1>Mencicipi Kelezatan Kuliner Korea</h1></a>
                 <p>
                   Kuliner Korea terkenal dengan citarasa yang kuat dan unik,
@@ -104,26 +110,26 @@
                   <a href="#" class="read-more">Baca Selengkapnya</a>
                 </p>
               </div>
-              <div class="bottom-description">
+              <div class="bottom-content">
                 <figure>
-                  <img src="./assets/images/profile.png" alt="" />
+                  <img src="./public/images/profile.png" alt="" />
                   <figcaption>
                     <h5>Septian Cahya</h5>
                     <p>14 Maret 2023</p>
                   </figcaption>
                 </figure>
               </div>
-            </section>
+            </div>
           </article>
           <article>
             <figure class="article-image">
-              <img src="./assets/images/india.jpeg" alt="" />
+              <img src="./public/images/india.jpeg" alt="" />
             </figure>
-            <section class="article-description">
-              <div class="top-description">
-                <span>Destinasi</span>
+            <div class="article-content">
+              <div class="top-content">
+                <span class="badge">Destinasi</span>
               </div>
-              <div class="middle-description">
+              <div class="middle-content">
                 <a href=""
                   ><h1>Mengunjungi Tempat-tempat Terbaik di India</h1></a
                 >
@@ -135,25 +141,31 @@
                   <a href="#" class="read-more">Baca Selengkapnya</a>
                 </p>
               </div>
-              <div class="bottom-description">
+              <div class="bottom-content">
                 <figure>
-                  <img src="./assets/images/profile.png" alt="" />
+                  <img src="./public/images/profile.png" alt="" />
                   <figcaption>
                     <h5>Septian Cahya</h5>
                     <p>11 Maret 2023</p>
                   </figcaption>
                 </figure>
               </div>
-            </section>
+            </div>
           </article>
           <button class="button" type="button">Tampilkan Semua</button>
-        </div>
-        <!-- ARTICLE WRITER SIDEBAR -->
-        <aside class="side-content">
-          <h2>Tentang Penulis</h2>
-          <section class="writer">
+        </section>
+        <!-- MAIN SECTION END -->
+      </div>
+    </main>
+
+    <!-- SIDEBAR START -->
+    <aside class="sidebar" id="sidebar">
+      <div class="container">
+        <section class="writer section" id="writer">
+          <h2 class="section-title">Tentang Penulis</h2>
+          <div class="main-writer">
             <div class="writer-image">
-              <img src="./assets/images/profile.png" alt="Septian Cahya" />
+              <img src="./public/images/profile.png" alt="Septian Cahya" />
             </div>
             <div class="writer-description">
               <ul>
@@ -179,33 +191,39 @@
                 </li>
               </ul>
             </div>
-          </section>
-        </aside>
-      </div>
-      <!-- ARTICLE END -->
-
-      <!-- GALLERY START -->
-      <div id="gallery" class="gallery container">
-        <h2>Galeri</h2>
-        <section class="box-gallery">
-          <img src="./assets/images/cambodia.jpeg" alt="" />
-          <img src="./assets/images/indonesian-food.jpeg" alt="" />
-          <img src="./assets/images/vietnam.jpeg" alt="" />
-          <img src="./assets/images/india.jpeg" alt="" />
-          <img src="./assets/images/korean-food.jpeg" alt="" />
-          <img src="./assets/images/japan.jpg" alt="" />
-          <img src="./assets/images/thailand.jpeg" alt="" />
+          </div>
         </section>
-        <button class="button" type="button">Tampilkan Semua</button>
       </div>
-      <!-- GALLERY END -->
-    </main>
+    </aside>
+    <!-- SIDEBAR END -->
+
     <!-- FOOTER START -->
-    <footer class="container">
-      <p>&copy; 2023 - Septian Cahya</p>
-      <p>Belajar Pemrograman Web - Dicoding</p>
+    <footer>
+      <!-- GALLERY SECTION -->
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <h2 class="section-title">Galeri</h2>
+          <section class="gallery-container">
+            <img src="./public/images/cambodia.jpeg" alt="" />
+            <img src="./public/images/indonesian-food.jpeg" alt="" />
+            <img src="./public/images/vietnam.jpeg" alt="" />
+            <img src="./public/images/india.jpeg" alt="" />
+            <img src="./public/images/korean-food.jpeg" alt="" />
+            <img src="./public/images/japan.jpg" alt="" />
+            <img src="./public/images/thailand.jpeg" alt="" />
+          </section>
+          <button class="button" type="button">Tampilkan Semua</button>
+        </div>
+      </section>
+      <!-- GALLERY SECTION END -->
+      <section class="footer" id="footer">
+        <div class="container">
+          <p>&copy; 2023 - Septian Cahya</p>
+          <p>Belajar Pemrograman Web - Dicoding</p>
+        </div>
+      </section>
     </footer>
     <!-- FOOTER END -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="dist/js/scripts.js"></script>
   </body>
 </html>

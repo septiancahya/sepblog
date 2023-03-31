@@ -1,0 +1,87 @@
+@use "../abstracts/variables" as var;
+@use "sass:map";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var.$primary-fonts;
+  line-height: 1.5;
+  color: var.$font-color;
+
+  .section {
+    padding-top: 6rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var.$font-color;
+}
+
+.container {
+  padding-inline: 1rem;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+/* SM: minimum viewport width 576px or above */
+@media screen and (min-width: map.get(var.$breakpoints, "sm")) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* MD: minimum viewport width 768px or above */
+@media screen and (min-width: map.get(var.$breakpoints, "md")) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* LG: minimum viewport width 992px or above */
+@media screen and (min-width: map.get(var.$breakpoints, "lg")) {
+  .container {
+    max-width: 960px;
+  }
+
+  body {
+    display: grid;
+    grid-template-areas:
+      "navbar navbar"
+      "hero hero"
+      "main sidebar"
+      "footer footer";
+    grid-template-columns: 2fr 1fr;
+
+    header {
+      grid-area: navbar;
+    }
+
+    main {
+      grid-area: main;
+
+      .newest-articles {
+        margin-inline-start: auto;
+      }
+    }
+
+    aside {
+      grid-area: sidebar;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+  }
+}
+
+/* XL: minimum viewport width 1200px or above */
+@media screen and (min-width: map.get(var.$breakpoints, "xl")) {
+  .container {
+    max-width: 1140px;
+  }
+}
