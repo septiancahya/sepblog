@@ -1,0 +1,17 @@
+{
+  "name": "sepblog",
+  "version": "1.0.0",
+  "description": "Ini merupakan project yang saya submit untuk Tahap 1 di Front-End Learning Path [Dicoding.com](https://dicoding.com/)\r [Demo](https://septiancahya.github.io/sepblog/)",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server . --port 9000 -o / -c-1",
+    "watch": "sass --watch sass/main.scss dist/css/style.css",
+    "build": "sass sass/main.scss dist/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.60.0"
+  }
+}

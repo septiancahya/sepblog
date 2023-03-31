@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as var;
+@use "sass:map";
+@use "../abstracts/mixins" as mix;
+
+.writer .main-writer {
+  border: var.$primary-light-border;
+  border-radius: 5px;
+  margin-block: 1rem;
+  overflow-wrap: break-word;
+
+  .writer-image {
+    border-bottom: var.$primary-light-border;
+    height: 100px;
+    position: relative;
+
+    img {
+      @include mix.rounded-image($size: 100px);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50%;
+      border: 1px solid white;
+    }
+  }
+
+  .writer-description {
+    padding: 4rem 1rem 2rem 1rem;
+    border-bottom: var.$primary-light-border;
+
+    ul {
+      text-align: center;
+      list-style: none;
+    }
+
+    li:not(:first-child) {
+      font-size: 14px;
+    }
+  }
+
+  .writer-socmed {
+    padding: 1rem;
+
+    ul {
+      @include mix.flex($justify: center);
+      list-style: none;
+      gap: 20px;
+    }
+
+    .socmed-list {
+      i {
+        transition: 0.3s ease-in-out;
+      }
+
+      a {
+        &:hover {
+          i.fa-instagram {
+            color: #e1306c;
+            transform: translateY(-3px);
+          }
+          i.fa-linkedin {
+            color: #0077b5;
+            transform: translateY(-3px);
+          }
+          i.fa-github {
+            color: #842484;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as var;
+@use "sass:map";
+@use "../abstracts/mixins" as mix;
+
+article {
+  display: flex;
+  flex-direction: column;
+  border: var.$primary-light-border;
+  border-radius: 5px;
+  margin-block: 1rem;
+  gap: 2rem;
+  padding: 1.5rem;
+
+  .article-image img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    @include mix.centering-image();
+  }
+
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .bottom-content > figure {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .middle-content h1 {
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+    }
+
+    .middle-content p,
+    .bottom-content p {
+      font-size: 12px;
+    }
+
+    .bottom-content img {
+      @include mix.centering-image();
+      @include mix.rounded-image($size: 35px);
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$breakpoints, "md")) {
+  article {
+    flex-direction: row;
+
+    .article-image {
+      flex-basis: 35%;
+    }
+
+    .article-content {
+      flex-basis: 65%;
+    }
+  }
+}

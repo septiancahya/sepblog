@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:map";
+
+nav {
+  position: fixed;
+  padding-block: 1rem;
+  background-color: white;
+  border-bottom: var.$primary-light-border;
+  z-index: 99;
+  width: 100%;
+
+  .container {
+    @include mix.flex($justify: space-between);
+
+    .logo h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: var.$primary-color;
+    }
+
+    .navigation {
+      .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        list-style-type: none;
+
+        a:hover,
+        .active {
+          color: var.$primary-color;
+        }
+      }
+    }
+
+    .mobile-nav-toggle {
+      display: block;
+      border: 0;
+      background: transparent;
+      padding: 0.5rem;
+      cursor: pointer;
+      width: 1.65rem;
+      aspect-ratio: 1;
+      background-image: url("/public/images/icon-hamburger.svg");
+      @include mix.centering-image($size: contain);
+
+      &[aria-expanded="true"] {
+        background-image: url("/public/images/icon-close.svg");
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map.get(var.$breakpoints, "md")) {
+  nav .container .navigation {
+    display: none;
+    max-width: 25rem;
+    position: fixed;
+    top: 5.5rem;
+    right: auto;
+    transform: translateX(175%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 2em 4em;
+    border: var.$primary-light-border;
+
+    &[data-visible] {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$breakpoints, "md")) {
+  nav {
+    margin-inline: unset;
+    .container {
+      .mobile-nav-toggle {
+        display: none;
+      }
+
+      .navigation {
+        display: block;
+        .nav-list {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}

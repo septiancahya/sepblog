@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:map";
+
+header .hero {
+  .container {
+    height: 100vh;
+    @include mix.flex($flex-dir: column);
+    gap: 2rem;
+    text-align: center;
+
+    .hero-text {
+      h1 {
+        color: var.$primary-color;
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+
+        &:last-child {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$breakpoints, "md")) {
+  header .hero {
+    .container {
+      flex-direction: row;
+      justify-content: space-evenly;
+      text-align: left;
+
+      .hero-image {
+        flex-basis: 50%;
+      }
+
+      .hero-text {
+        flex-basis: 50%;
+      }
+    }
+  }
+}

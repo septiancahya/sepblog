@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as var;
+@use "sass:map";
+@use "../abstracts/mixins" as mix;
+
+footer .gallery .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+
+@media screen and (min-width: map.get(var.$breakpoints, "md")) {
+  footer .gallery .gallery-container {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}
+
+/* LG: minimum viewport width 992px or above */
+@media screen and (min-width: map.get(var.$breakpoints, "lg")) {
+  footer .gallery .gallery-container {
+    gap: 1rem;
+  }
+}
+
+/* XL: minimum viewport width 1200px or above */
+@media screen and (min-width: map.get(var.$breakpoints, "xl")) {
+  footer .gallery .gallery-container {
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+  }
+}

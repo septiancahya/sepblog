@@ -1,0 +1,18 @@
+@mixin flex($flex-dir: row, $justify: center) {
+  display: flex;
+  flex-direction: $flex-dir;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin centering-image($size: cover) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: center;
+}
+
+@mixin rounded-image($size) {
+  width: $size;
+  height: $size;
+  border-radius: 100%;
+}
