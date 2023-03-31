@@ -23,7 +23,7 @@ const hero = document.querySelector("#hero > .container");
 const styles = window.getComputedStyle(hero);
 
 const main = document.querySelector("main > .container");
-const aside = document.querySelector("aside");
+const aside = document.querySelector("aside > .container");
 
 function setMarginInline() {
   const marginLeft = styles.getPropertyValue("margin-left");
