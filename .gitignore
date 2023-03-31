@@ -1,7 +1,2 @@
-# Sass-generated files
-.sass-cache/
-*.css.map
-*.css
-
 # Node.js dependencies
 /node_modules
