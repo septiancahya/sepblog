@@ -6,7 +6,7 @@ footer .footer {
   margin-top: 6rem;
   padding-block: 2rem;
   background-color: var.$primary-color;
-  .container {
+  .container > * {
     @include mix.flex($flex-dir: column);
     text-align: center;
 
@@ -18,7 +18,7 @@ footer .footer {
   footer .footer {
     margin-inline: unset;
 
-    .container {
+    .container > * {
       flex-direction: row;
       justify-content: space-between;
     }
