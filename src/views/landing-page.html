@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title><%= htmlWebpackPlugin.options.title %> | Personal Blog</title>
+  </head>
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <nav-app></nav-app>
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-image">
+            <img src="/images/hero-img.png" alt="" />
+          </div>
+          <div class="hero-text">
+            <p>Our Blog</p>
+            <h1>Travel & Stories</h1>
+            <p>
+              Blog yang memandu Anda untuk menjelajahi dunia dengan cara yang
+              menyenangkan dan informatif
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- HERO SECTION END -->
+    </header>
+    <!-- HEADER END -->
+    <main>
+      <div class="container">
+        <!-- MAIN SECTION -->
+        <section class="newest-articles section" id="newest-articles"></section>
+        <!-- MAIN SECTION END -->
+      </div>
+    </main>
+
+    <!-- SIDEBAR START -->
+    <aside class="sidebar" id="sidebar">
+      <div class="container">
+        <section class="writer section" id="writer">
+          <h2 class="section-title">Tentang Penulis</h2>
+          <writer-about
+            imageUrl="/images/profile.png"
+            name="Septian Cahya"
+            address="Sumedang, Jawa Barat"
+            email="cahyaseptian39@gmail.com"
+          ></writer-about>
+        </section>
+      </div>
+    </aside>
+    <!-- SIDEBAR END -->
+
+    <!-- FOOTER START -->
+    <footer>
+      <!-- GALLERY SECTION -->
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <h2 class="section-title">Galeri</h2>
+          <section class="gallery-container">
+            <!-- <img src="/images/cambodia.jpeg" alt="" />
+            <img src="/images/indonesian-food.jpeg" alt="" />
+            <img src="/images/vietnam.jpeg" alt="" />
+            <img src="/images/india.jpeg" alt="" />
+            <img src="/images/korean-food.jpeg" alt="" />
+            <img src="/images/japan.jpg" alt="" />
+            <img src="/images/thailand.jpeg" alt="" /> -->
+          </section>
+          <a class="button" href="#">Tampilkan Semua</a>
+        </div>
+      </section>
+      <!-- GALLERY SECTION END -->
+      <section class="footer" id="footer">
+        <div class="container">
+          <footer-app></footer-app>
+        </div>
+      </section>
+    </footer>
+    <!-- FOOTER END -->
+  </body>
+</html>
