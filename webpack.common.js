@@ -53,6 +53,13 @@ module.exports = {
       ...htmlWebpackPluginConfig,
     }),
 
+    new HtmlWebpackPlugin({
+      title: "Single Article",
+      filename: "single-article.html",
+      template: path.resolve(__dirname, "src/views/single-article.html"),
+      ...htmlWebpackPluginConfig,
+    }),
+
     new CopyWebpackPlugin({
       patterns: [
         {

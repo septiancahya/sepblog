@@ -20,7 +20,7 @@ class ArticleCard extends LitWithoutShadowDom {
   render() {
     const categoryItem = this.category.split(",");
     return html`
-      <article>
+      <article class="list-articles">
         <figure class="article-image">
           <img src="${this.imageUrl}" alt="" />
         </figure>
@@ -34,14 +34,14 @@ class ArticleCard extends LitWithoutShadowDom {
             <text-link
               to="${this.to}"
               contentText="${this.title}"
-              type="h1"
+              type="h2"
             ></text-link>
             <p>
               ${this.description}
               <text-link
-                to="#"
+                to="${this.to}"
                 contentText="Baca selengkapnya"
-                type="p"
+                classes="primary-link"
               ></text-link>
             </p>
           </div>
