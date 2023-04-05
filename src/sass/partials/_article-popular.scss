@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as var;
+@use "sass:map";
+@use "../abstracts/mixins" as mix;
+
+.popular-articles .popular-articles-wrapper {
+  border: var.$primary-light-border;
+  border-radius: 5px;
+  margin-block: 1rem;
+
+  .main-popular-article {
+    @include mix.flex($justify: flex-start);
+    border-bottom: var.$primary-light-border;
+    padding: 10px 5px;
+
+    .article-rank {
+      flex-basis: 15%;
+      border-radius: 5px;
+      background-color: var.$primary-color;
+      margin-inline: 10px;
+      padding-block: 7px;
+    }
+
+    .article-content {
+      flex-basis: 85%;
+      text-align: left;
+      @include mix.flex($flex-dir: column);
+      align-items: flex-start;
+      font-size: 14px;
+      font-weight: 500;
+      p {
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+  }
+}

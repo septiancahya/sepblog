@@ -19,6 +19,10 @@ class TextLink extends LitWithoutShadowDom {
       type: String,
       reflect: true,
     },
+    classes: {
+      type: String,
+      reflect: true,
+    },
   };
 
   constructor() {
@@ -26,7 +30,11 @@ class TextLink extends LitWithoutShadowDom {
   }
 
   render() {
-    return html` <a href="${this.to}">${this._textLinkTemplate()}</a> `;
+    return html`
+      <a href="${this.to}" class="${this.classes || nothing}"
+        >${this._textLinkTemplate()}</a
+      >
+    `;
   }
 
   _textLinkTemplate() {
@@ -39,10 +47,10 @@ class TextLink extends LitWithoutShadowDom {
     if (this.contentText) {
       if (this.type == "h1") {
         textTemplate = html`<h1>${this.contentText}</h1>`;
-      }
-
-      if (this.type == "p") {
-        textTemplate = html`<p>${this.contentText}</p>`;
+      } else if (this.type == "h2") {
+        textTemplate = html`<h2>${this.contentText}</h2>`;
+      } else {
+        textTemplate = html`${this.contentText}`;
       }
     }
 

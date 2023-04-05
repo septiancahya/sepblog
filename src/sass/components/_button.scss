@@ -1,8 +1,7 @@
 @use "../abstracts/variables" as var;
 
 .button {
-  display: block;
-  text-align: center;
+  display: inline-block;
   border: 1px solid var.$primary-color;
   padding: 1rem 2rem;
   border-radius: 50px;

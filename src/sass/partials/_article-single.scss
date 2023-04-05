@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as var;
+@use "sass:map";
+@use "../abstracts/mixins" as mix;
+
+article.single-article {
+  border: var.$primary-light-border;
+  border-radius: 5px;
+  margin-block: 1rem;
+  gap: 2rem;
+  padding: 1.5rem;
+  text-align: left;
+
+  h2 {
+    margin-top: 10px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
+  figure {
+    margin-top: 20px;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}

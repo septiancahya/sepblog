@@ -4,7 +4,7 @@
   "message": "Success to retrieve data",
   "result": [
     {
-      "id": "1",
+      "id": 1,
       "imageUrl": "/images/thailand.jpeg",
       "title": "Menjelajahi Keindahan Thailand",
       "description": "Thailand adalah negara yang terkenal dengan pantai-pantainya yang indah. Selain itu, negara ini juga kaya akan budaya dan sejarahnya, makanan lezat, dan pengalaman yang tak terlupakan...",
@@ -17,7 +17,7 @@
       }
     },
     {
-      "id": "2",
+      "id": 2,
       "imageUrl": "/images/korean-food.jpeg",
       "title": "Mencicipi Kelezatan Kuliner Korea",
       "description": "Kuliner Korea terkenal dengan citarasa yang kuat dan unik, serta beragam pilihan makanan yang dapat memanjakan lidah Anda. Kami akan membawa Anda untuk menjelajahi berbagai macam hidangan tradisional dan modern Korea yang wajib dicicipi saat berkunjung ke negara ini...",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "3",
+      "id": 3,
       "imageUrl": "/images/india.jpeg",
       "title": "Mengunjungi Tempat-tempat Terbaik di India",
       "description": "India merupakan negara yang kaya akan kebudayaan dan sejarahnya yang panjang. Selain itu, India juga memiliki empat-tempat yang indah dan menakjubkan yang pantas dikunjungi oleh wisatawan...",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "id": "4",
+      "id": 4,
       "imageUrl": "/images/japan.jpg",
       "title": "Jalan-Jalan Kuliner di Jepang: Menikmati Ragam Hidangan dari Berbagai Daerah",
       "description": "apan dikenal sebagai surga kuliner di Asia. Negara ini memiliki banyak makanan tradisional yang terkenal di seluruh dunia seperti sushi, ramen, dan tempura. Namun, setiap daerah di Jepang memiliki ciri khas kuliner sendiri yang menarik untuk dicicipi. Dalam blog ini, kita akan menjelajahi makanan khas dari berbagai daerah di Jepang seperti Hokkaido, Osaka, dan Fukuoka...",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "5",
+      "id": 5,
       "imageUrl": "/images/cambodia.jpeg",
       "title": "Menikmati Keindahan Budaya dan Alam di Kamboja: Petualangan Travel yang Tak Terlupakan",
       "description": "Kamboja menawarkan keindahan alam dan budaya yang luar biasa. Dalam blog ini, kita akan menjelajahi tempat-tempat wisata terbaik di Kamboja seperti Angkor Wat, Phnom Penh, dan Sihanoukville. Selain itu, kita akan mencoba mencari tahu tentang kehidupan sehari-hari masyarakat Kamboja, keunikan kuliner lokal, dan budaya tradisional yang masih dijaga hingga saat ini. Jangan lewatkan pengalaman petualangan travel yang tak terlupakan di Kamboja...",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "6",
+      "id": 6,
       "imageUrl": "/images/vietnam.jpeg",
       "title": "Petualangan Travel yang Menakjubkan di Vietnam: Menemukan Keindahan Alam, Sejarah, dan Kuliner Lokal",
       "description": "Vietnam adalah destinasi travel yang menakjubkan dengan keindahan alam yang luar biasa, sejarah yang kaya, dan kuliner lokal yang menggugah selera. Dalam blog ini, kita akan menjelajahi tempat-tempat wisata terbaik di Vietnam seperti Halong Bay, Ho Chi Minh City, dan Da Nang. Selain itu, kita akan mencoba mencari tahu tentang kehidupan sehari-hari masyarakat Vietnam, keunikan kuliner lokal, dan budaya tradisional yang masih dijaga hingga saat ini. Jangan lewatkan pengalaman petualangan travel yang tak terlupakan di Vietnam...",
@@ -82,7 +82,7 @@
       }
     },
     {
-      "id": "7",
+      "id": 7,
       "imageUrl": "/images/indonesian-food.jpeg",
       "title": "Menikmati Kelezatan Kuliner Nusantara: Jelajah Wisata Kuliner di Indonesia",
       "description": "Indonesia dikenal sebagai negara dengan kekayaan kuliner yang melimpah ruah. Dalam blog ini, kita akan menjelajahi kelezatan kuliner nusantara yang beragam seperti nasi goreng, rendang, sate, dan masih banyak lagi. Kita akan mengunjungi tempat-tempat kuliner terbaik di Jakarta, Bandung, Yogyakarta, Bali, dan Makassar. Selain itu, kita juga akan mencoba mencari tahu tentang bahan-bahan tradisional yang digunakan dalam kuliner Indonesia serta sejarah dan budaya di balik setiap hidangan. Jangan lewatkan pengalaman jelajah wisata kuliner yang menggugah selera di Indonesia....",

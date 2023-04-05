@@ -6,9 +6,11 @@ import "./components/index";
 
 // Import  javascript file as needed
 import LandingPage from "./pages/landingPage";
+import SingleArticle from "./pages/singleArticle";
 
 const routes = {
   "/": LandingPage,
+  "/single-article.html": SingleArticle,
 };
 
 const initPages = () => {
@@ -31,18 +33,24 @@ const initPages = () => {
       link.classList.add("active");
     });
   });
-  const hero = document.querySelector("#hero > .container");
-  const styles = window.getComputedStyle(hero);
+
+  const navContainer = document.querySelector("nav > .container");
+  const styles = window.getComputedStyle(navContainer);
 
   const navigation = document.querySelector("nav > .container > .navigation");
 
-  function setMarginRight() {
-    const marginRight = styles.getPropertyValue("margin-right");
-    navigation.style.right = marginRight;
+  const main = document.querySelector("main > .container");
+  const aside = document.querySelector("aside > .container");
+
+  function setMargin() {
+    const marginLeft = styles.getPropertyValue("margin-left");
+    main.style.marginInlineStart = marginLeft;
+    aside.style.marginInlineEnd = marginLeft;
+    navigation.style.right = marginLeft;
   }
 
-  window.addEventListener("load", () => setMarginRight());
-  window.addEventListener("resize", () => setMarginRight());
+  window.addEventListener("load", () => setMargin());
+  window.addEventListener("resize", () => setMargin());
 };
 
 const detectRoute = () => routes[window.location.pathname];
